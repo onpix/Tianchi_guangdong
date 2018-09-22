@@ -1,0 +1,15 @@
+TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/train1'
+# TRAIN_PATH = '/run/media/why/OS/WHY/AI_Dataset/guangdong_round1_train1_20180903'
+NO_LABEL_PRED = True
+MODEL_SAVE_PATH = './model'
+# TEST_PATH = '/disk/unique/why/dataset/Tianchi_al/guangdong_round1_test_a_20180910'
+TEST_PATH = '/disk/unique/why/dataset/Tianchi_al/test'
+TEST_MODEL_PATH = '/disk/unique/why/code/Tianchi_al/model/best_10:00_25.pkl'
+CLS2IDX = {'凸粉': 0, '擦花': 1, '漏底': 2, '碰凹': 3}
+BATCH_SIZE = 8
+SAVE_SNAP = 5
+CLASS_NUM = 4
+STEP_SIZE = 5
+SIZE = 224
+EPOCH = 25
+LR = 1e-3
