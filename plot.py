@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt 
 import numpy as np 
+from config import MODEL_NAME
 ROOT = '/run/media/why/OS/AI_Lab/whyAI/Tianchi_al_local/'
 PATH = './data/log.npz'
-NAME = ''
+NAME = '_' + MODEL_NAME
 
 def read_f(path):
     res = np.load(path)
@@ -13,8 +14,8 @@ def read_f(path):
 def draw(array, name):
     plt.figure()
     x = list(range(len(array)))
-    plt.scatter(x, array, c='navy', linewidths=0.1)
-    plt.plot(x, array, label=name, c='navy')
+    # plt.scatter(x, array, c='navy', linewidths=0.1)
+    plt.plot(x, array, label=name, c='navy', linewidth=2)
     plt.grid()
     plt.savefig(ROOT+'plot/{}.jpg'.format(name))
 
