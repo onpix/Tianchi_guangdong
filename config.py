@@ -1,11 +1,13 @@
 import ast
-import os 
+import os
 
 # 换数据集记得改!!!!!!
-MODEL_NAME = 'unfreeze_1e-4'
 DEBUG = False
+MODEL_NAME = 'No10_unfreeze_1e-4_dev'
+TEST_MODEL_NAME = 'best_50_8_0.0001_No10_unfreeze_1e-4_dev.pkl'
+DEV = True
 TEST_AFTER_TRAIN = True
-TFX = True      # if using tensorboardX
+TFX = True    # if using tensorboardX
 FREEZE = False
 CLASS_NUM = 12
 BATCH_SIZE = 8
@@ -15,11 +17,17 @@ SIZE = 224
 EPOCH = 50
 LR = 1e-4
 
-TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/train2'
+if DEBUG:
+    MODEL_NAME = 'debug'
+    TFX = False
+    EPOCH = 5
 NO_LABEL_PRED = True
+TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/train2'
+if DEV:
+    DEV_PATH = '/disk/unique/why/dataset/Tianchi_al/dev'
 MODEL_SAVE_PATH = './model'
 TEST_PATH = '/disk/unique/why/dataset/Tianchi_al/test'
-TEST_MODEL_PATH = '/disk/unique/why/code/Tianchi_al/model/20_1e-3_unfreeze.pkl'
+TEST_MODEL_PATH = '/disk/unique/why/code/Tianchi_al/model/' + TEST_MODEL_NAME
 
 if DEBUG:
     TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/sample_train'
