@@ -2,7 +2,7 @@ import ast
 import os 
 
 # 换数据集记得改!!!!!!
-MODEL_NAME = 'unfreeze_1e-2'
+MODEL_NAME = 'unfreeze_1e-4'
 DEBUG = False
 TEST_AFTER_TRAIN = True
 TFX = True      # if using tensorboardX
@@ -13,13 +13,13 @@ SAVE_SNAP = 5
 STEP_SIZE = 5
 SIZE = 224
 EPOCH = 50
-LR = 1e-2
+LR = 1e-4
 
 TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/train2'
 NO_LABEL_PRED = True
 MODEL_SAVE_PATH = './model'
 TEST_PATH = '/disk/unique/why/dataset/Tianchi_al/test'
-TEST_MODEL_PATH = '/disk/unique/why/code/Tianchi_al/model/best_50_8_0.001_unfreeze.pkl'
+TEST_MODEL_PATH = '/disk/unique/why/code/Tianchi_al/model/20_1e-3_unfreeze.pkl'
 
 if DEBUG:
     TRAIN_PATH = '/disk/unique/why/dataset/Tianchi_al/sample_train'
