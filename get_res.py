@@ -1,7 +1,7 @@
 import re
 import numpy as np
 import time
-from config import MODEL_NAME
+from config import TEST_MODEL_NAME
 ROOT = '/run/media/why/OS/AI_Lab/whyAI/Tianchi_al_local'
 FILE_NAME = '/data/pred.txt'
 SAVE_WITH_TIME = False
@@ -39,7 +39,7 @@ new = np.concatenate((names, preds), axis=1)
 
 if SAVE_WITH_TIME:
     now = time.strftime('%H:%M', time.localtime())
-    np.savetxt(ROOT+'/{}_{}.csv'.format(MODEL_NAME, now), new, fmt='%s,%s')
+    np.savetxt(ROOT+'/{}_{}.csv'.format(TEST_MODEL_NAME, now), new, fmt='%s,%s')
 else:
-    np.savetxt(ROOT+'/{}.csv'.format(MODEL_NAME), new, fmt='%s,%s')
+    np.savetxt(ROOT+'/{}.csv'.format(TEST_MODEL_NAME), new, fmt='%s,%s')
 print('Everything done!')
